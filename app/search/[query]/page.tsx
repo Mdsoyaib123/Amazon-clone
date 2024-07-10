@@ -1,14 +1,23 @@
 "use client"
 import { useParams } from 'next/navigation'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSupabase } from '../../../lib/supabase/hooks/useSupabase'
 
-const page = () => {
+const Page = () => {
     const{query} = useParams()
+    const {product,getDataFromSupabase} = useSupabase();
+
+    useEffect(()=>{
+        getDataFromSupabase();
+    },[])
+    console.log(product)
   return (
     <div>
-     <h1>{query}</h1> 
+     {
+        product.map((item)=><h1 key={item.id}>{item.title}</h1>)
+     }
     </div>
   )
 }
 
-export default page
+export default Page;

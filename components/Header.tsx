@@ -21,6 +21,7 @@ const Header = () => {
 const router = useRouter();
   const searchHandler=()=>{
     router.push(`/search/${query}`)
+    setQuery('')
   }
   return (
     <>
@@ -33,6 +34,7 @@ const router = useRouter();
             <input
             value={query}
             onChange={(e)=>setQuery(e.target.value)}
+            id="input"
               className="w-full px-2 py-2 outline-none text-black"
               type="text"
               placeholder="Search Amazon.in"
