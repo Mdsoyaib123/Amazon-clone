@@ -3,6 +3,7 @@ import React from "react";
 import amazonLogo from "../public/amazon-logo-2.webp";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const header = () => {
   const itemlist = [
@@ -17,12 +18,12 @@ const header = () => {
     <>
       <div className="bg-[#131921] text-white py-2 ">
         <div className="flex items-center justify-between w-[98%] mx-auto">
-          <div className="w-[10%]">
-            <Image src={amazonLogo} width={150} height={150} alt="Logo" />
+          <div  className="w-[10%] cur">
+           <Link href={'/'}> <Image src={amazonLogo} width={150} height={150} alt="Logo" /></Link>
           </div>
           <div className="flex items-center  w-[60%] bg-[#febd69] ">
             <input
-              className="w-full px-2 py-[6px] outline-none text-black"
+              className="w-full px-2 py-2 outline-none text-black"
               type="text"
               placeholder="Search Amazon.in"
             />
@@ -54,7 +55,18 @@ const header = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#232f3e] w-full text-white">dsfsdf</div>
+      <div className="bg-[#232f3e] w-full  text-white p-2">
+        <div className="w-[98%] mx-auto flex justify-between">
+        <div className="w]">
+          {
+            itemlist.map((item,index)=><Link href={`/${item}`} key={index} className=" border border-transparent hover:border hover:border-white p-2 ">{item}</Link>)
+          }
+        </div>
+        <div>
+          <h1 className="text-[#febd69] cursor-pointer">Sign Out</h1>
+        </div>
+        </div>
+      </div>
     </>
   );
 };
