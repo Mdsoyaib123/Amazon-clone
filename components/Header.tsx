@@ -1,11 +1,14 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import amazonLogo from "../public/amazon-logo-2.webp";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const header = () => {
+const Header = () => {
+  
   const itemlist = [
     "All",
     "Today's Deals",
@@ -14,6 +17,11 @@ const header = () => {
     "Gift Cards",
     "Sell",
   ];
+  const [query,setQuery] = useState<string>('');
+const router = useRouter();
+  const searchHandler=()=>{
+    router.push(`/search/${query}`)
+  }
   return (
     <>
       <div className="bg-[#131921] text-white py-2 ">
@@ -23,11 +31,13 @@ const header = () => {
           </div>
           <div className="flex items-center  w-[60%] bg-[#febd69] ">
             <input
+            value={query}
+            onChange={(e)=>setQuery(e.target.value)}
               className="w-full px-2 py-2 outline-none text-black"
               type="text"
               placeholder="Search Amazon.in"
             />
-            <div className=" px-2 cursor-pointer text-black outline-4">
+            <div onClick={searchHandler} className=" px-2 cursor-pointer text-black outline-4">
               <IoSearchOutline size={30}></IoSearchOutline>
             </div>
           </div>
@@ -44,7 +54,7 @@ const header = () => {
               <p className="relative top-3 left-4">0</p>
 
               <div className="flex cursor-pointer">
-                <div>
+                <div >
                   <PiShoppingCartSimpleThin
                     size={40}
                   ></PiShoppingCartSimpleThin>
@@ -63,7 +73,7 @@ const header = () => {
           }
         </div>
         <div>
-          <h1 className="text-[#febd69] cursor-pointer">Sign Out</h1>
+          <h1 className="text-[#febd69] hover:underline cursor-pointer font-bold">Sign Out</h1>
         </div>
         </div>
       </div>
@@ -71,4 +81,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
