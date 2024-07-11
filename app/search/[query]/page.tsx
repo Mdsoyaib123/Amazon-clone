@@ -5,17 +5,16 @@ import { useSupabase } from '../../../lib/supabase/hooks/useSupabase'
 
 const Page = () => {
     const{query} = useParams()
-    const {product,getDataFromSupabase} = useSupabase();
-
+    const {filterData,getFilterData} = useSupabase();
+    
     useEffect(()=>{
-        getDataFromSupabase();
+       
+        getFilterData()
     },[])
-    console.log(product)
+  console.log(query)
   return (
     <div>
-     {
-        product.map((item)=><h1 key={item.id}>{item.title}</h1>)
-     }
+      
     </div>
   )
 }

@@ -30,16 +30,16 @@ const router = useRouter();
           <div  className="w-[10%] cur">
            <Link href={'/'}> <Image src={amazonLogo} width={150} height={150} alt="Logo" /></Link>
           </div>
-          <div className="flex items-center  w-[60%] bg-[#febd69] ">
+          <div className="flex items-center  w-[50%]   ">
             <input
             value={query}
             onChange={(e)=>setQuery(e.target.value)}
             id="input"
-              className="w-full px-2 py-2 outline-none text-black"
+              className="w-full rounded-l-md px-2 py-2 outline-none text-black"
               type="text"
               placeholder="Search Amazon.in"
             />
-            <div onClick={searchHandler} className=" px-2 cursor-pointer text-black outline-4">
+            <div onClick={searchHandler} className=" px-2 cursor-pointer text-black outline-4 bg-[#febd69] py-[5px] rounded-r-md">
               <IoSearchOutline size={30}></IoSearchOutline>
             </div>
           </div>
