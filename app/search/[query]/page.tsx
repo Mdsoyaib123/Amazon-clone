@@ -9,12 +9,14 @@ const Page = () => {
     
     useEffect(()=>{
        
-        getFilterData()
+        getFilterData(query.toString())
     },[])
-  console.log(query)
+  console.log(filterData)
   return (
     <div>
-      
+      {/* {
+        filterData.map(item=><h1 key={item.id}>{item.title}</h1>)
+      } */}
     </div>
   )
 }

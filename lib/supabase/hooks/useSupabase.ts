@@ -15,14 +15,10 @@ export const useSupabase =  () => {
       console.log(error);
     }
   };
-  const getFilterData =async () => {
-    let { data: Products, error } = await supabase
-    .from('Products')
-    .select('*')
-    .range(0, 5)
+  const getFilterData =async (query) => {
+    let { data: Products, error } = await supabase.from("Products").select("*").ilike('title',`%${query}%`)
     if (Products) {
-      setProduct(Products);
-      
+      setFilterData(Products);  
     }
     if (error) {
       console.log(error);
