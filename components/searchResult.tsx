@@ -1,6 +1,7 @@
 import React from 'react'
 
-const searchResult = () => {
+const SearchResult = ({filterData}:{filterData:any}) => {
+  console.log(filterData)
   return (
     <div>
       
@@ -8,4 +9,4 @@ const searchResult = () => {
   )
 }
 
-export default searchResult
+export default SearchResult

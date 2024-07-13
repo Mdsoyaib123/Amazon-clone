@@ -2,6 +2,7 @@
 import { useParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 import { useSupabase } from '../../../lib/supabase/hooks/useSupabase'
+import SearchResult from '../../../components/SearchResult';
 
 const Page = () => {
     const{query} = useParams()
@@ -11,12 +12,10 @@ const Page = () => {
        
         getFilterData(query.toString())
     },[])
-  console.log(filterData)
+
   return (
     <div>
-      {/* {
-        filterData.map(item=><h1 key={item.id}>{item.title}</h1>)
-      } */}
+      <SearchResult filterData={filterData}></SearchResult>
     </div>
   )
 }
