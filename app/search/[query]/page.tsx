@@ -9,7 +9,6 @@ const Page = () => {
     const {filterData,getFilterData} = useSupabase();
     
     useEffect(()=>{
-       
         getFilterData(query.toString())
     },[])
 
