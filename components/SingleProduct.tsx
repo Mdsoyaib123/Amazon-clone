@@ -1,11 +1,26 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
-const SingleProduct = () => {
+const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
   return (
-    <div>
-      
+    <div className="w-[80%] mx-auto mt-10 ">
+      <div>
+        {singleProduct.map((product: any) => {
+          return (
+            <div key={product.id}>
+              <Image
+                
+                src={product.image}
+                height={400}
+                width={250}
+                alt={product.title}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SingleProduct
+export default SingleProduct;
