@@ -15,6 +15,7 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
                 width={250}
                 alt={product.title}
               />
+              <h1>{product.title}</h1>
             </div>
           );
         })}
