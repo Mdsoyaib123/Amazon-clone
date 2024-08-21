@@ -1,23 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Rating from "./shered/Rating";
+import AddToCardContainer from '@/components/AddToCardContainer';
 
 const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
   return (
-    <div className="w-[80%] mx-auto mt-10 ">
-      <div>
+    <div className="w-[80%] mx-auto mt-10  ">
+      <div className=" flex ">
+        <div className="border-2 flex justify-around">
         {singleProduct.map((product: any) => {
           return (
-            <div key={product.id} className="flex gap-4 ">
+            <div key={product.id} className="flex ">
               <div className="bg-gray-200"><Image
                 className='mix-blend-multiply p-4'
                 src={product.image}
-                height={500}
-                width={400}
+                height={300}
+                width={300}
                 alt={product.title}
               /></div>
               
-              <div>
+              <div className="ml-2 w-[70%]">
               <h1 className="font-bold text-lg">{product.title}</h1>
               <p>{product.description}</p>
               <Rating ratings={product.rating}></Rating>
@@ -32,7 +34,13 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
             </div>
           );
         })}
+        
+        <AddToCardContainer></AddToCardContainer>
+        </div>
+
       </div>
+     
+      
     </div>
   );
 };

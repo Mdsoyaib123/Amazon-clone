@@ -11,8 +11,9 @@ const Page = () => {
     getSingleProduct(Number(id))
    },[])
   return (
-    <div>
+    <div className='flex '>
       <SingleProduct singleProduct={singleProduct}></SingleProduct>
+      
     </div>
   )
 }
