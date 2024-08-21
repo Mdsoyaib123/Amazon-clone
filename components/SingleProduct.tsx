@@ -5,13 +5,13 @@ import AddToCardContainer from '@/components/AddToCardContainer';
 
 const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
   return (
-    <div className="w-[80%] mx-auto mt-10  ">
-      <div className=" flex ">
-        <div className="border-2 flex justify-around">
+    <div className="mx-6 mt-10 flex gap-2">
+      <div className=" flex  w-[80%]">
+       
         {singleProduct.map((product: any) => {
           return (
-            <div key={product.id} className="flex ">
-              <div className="bg-gray-200"><Image
+            <div key={product.id} className="flex gap-6 justify-center">
+              <div className="bg-gray-200 w-[50%]"><Image
                 className='mix-blend-multiply p-4'
                 src={product.image}
                 height={300}
@@ -19,7 +19,7 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
                 alt={product.title}
               /></div>
               
-              <div className="ml-2 w-[70%]">
+              <div className="  w-[80%]">
               <h1 className="font-bold text-lg">{product.title}</h1>
               <p>{product.description}</p>
               <Rating ratings={product.rating}></Rating>
@@ -35,11 +35,10 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
           );
         })}
         
-        <AddToCardContainer></AddToCardContainer>
-        </div>
-
       </div>
      
+      <div className='w-[20%]'>
+        <AddToCardContainer></AddToCardContainer></div>
       
     </div>
   );
