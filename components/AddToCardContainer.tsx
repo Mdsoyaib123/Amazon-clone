@@ -12,8 +12,8 @@ const AddToCardContainer = ({item}:{item:any}) => {
         <p className='py-2 flex gap-1 item-center hover:text-[#c7511f] cursor-pointer'>
           <TiLocationOutline className='text-black' size={20}></TiLocationOutline>
         Deliver to Bangladesh</p>
-        <p className='text-2xl text-[#007600]'>In Stock</p>
-        <div className='flex gap-4 text-sm  text-[#565959]'>
+        <p className='text-xl py-1 text-[#007600]'>In Stock</p>
+        <div className='flex gap-4 text-sm  text-[#565959] mb-2'>
           <ul className='space-y-1'>
             <li>Ships from</li>
             <li>Sold by</li>
@@ -27,6 +27,8 @@ const AddToCardContainer = ({item}:{item:any}) => {
             <li className='text-[#527185]'>Secure transaction</li>
           </ul>
         </div>
+        <button className='bg-[#ffd814] py-1 px-2 rounded-full w-full text-sm mb-2'>Add to Cart</button>
+        <button className='bg-[#ffa41c] py-1 px-2 rounded-full w-full text-sm'>Buy Now</button>
       </div>
     </div>
   )
