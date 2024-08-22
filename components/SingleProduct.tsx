@@ -10,7 +10,7 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
        
         {singleProduct.map((product: any) => {
           return (
-            <div key={product.id} className="flex gap-6 justify-center">
+            <div key={product.id} className="flex gap-4 justify-center">
               <div className="bg-gray-200 w-[50%]"><Image
                 className='mix-blend-multiply p-4'
                 src={product.image}
@@ -24,7 +24,7 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
               <p>{product.description}</p>
               <Rating ratings={product.rating}></Rating>
               <p className='font-bold text-2xl'>{`$${product.price}`}</p>
-              <div>
+              <div className="px-2">
                 <h1 className="font-bold text-sm">About this item </h1>
                 <ul className='list-disc ml-5'><li>Cell Service Booster: This phone booster antenna ensures fewer dropped calls, better voice quality, faster mobile internet, and improved streaming for a single mobile device in a cradle mount</li>
                 <li>Portable Cell Signal Booster: This mobile cell phone booster supports the latest in 5G technology and has tool-free installation, guided by our app</li></ul>
