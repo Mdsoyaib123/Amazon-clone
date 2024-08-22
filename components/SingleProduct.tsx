@@ -4,6 +4,7 @@ import Rating from "./shered/Rating";
 import AddToCardContainer from '@/components/AddToCardContainer';
 
 const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
+  console.log(singleProduct)
   return (
     <div className="mx-6 mt-10 flex gap-2">
       <div className=" flex  w-[80%]">

@@ -6,6 +6,8 @@ import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAppSelector } from "@/lib/supabase/hooks/redux";
+import { getCart } from "@/redux/cartSlice";
 
 const Header = () => {
   
@@ -19,6 +21,7 @@ const Header = () => {
   ];
   const [query,setQuery] = useState<string>('');
 const router = useRouter();
+const cart = useAppSelector(getCart);
   const searchHandler=()=>{
     router.push(`/search/${query}`)
     setQuery('')
@@ -53,7 +56,7 @@ const router = useRouter();
               <h1 className="font-medium text-sm">& Order</h1>
             </div>
             <div className="">
-              <p className="relative top-3 left-4">0</p>
+              <p className="relative top-3 left-4">{cart.length}</p>
 
               <div className="flex cursor-pointer">
                 <div >

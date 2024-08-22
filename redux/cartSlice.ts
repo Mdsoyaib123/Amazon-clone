@@ -5,7 +5,9 @@ interface cartSate{
 }
 const initialState:cartSate={
     cart:[]
+    
 }
+
 const cartSlice =createSlice({
     name:'cart',
     initialState,

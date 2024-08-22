@@ -1,8 +1,10 @@
+import { useAppDispatch } from '@/lib/supabase/hooks/redux';
+import { addToCart } from '@/redux/cartSlice';
 import React from 'react'
 import { TiLocationOutline } from "react-icons/ti";
 
 const AddToCardContainer = ({item}:{item:any}) => {
- 
+ const dispatch = useAppDispatch()
   return (
     <div className='border border-gray-300 rounded-md h-fit'>
       <div className="p-4"> 
@@ -27,7 +29,9 @@ const AddToCardContainer = ({item}:{item:any}) => {
             <li className='text-[#527185]'>Secure transaction</li>
           </ul>
         </div>
-        <button className='bg-[#ffd814] py-1 px-2 rounded-full w-full text-sm mb-2'>Add to Cart</button>
+        <button onClick={()=>{
+         dispatch(addToCart(item))
+        }} className='bg-[#ffd814] py-1 px-2 rounded-full w-full text-sm mb-2'>Add to Cart</button>
         <button className='bg-[#ffa41c] py-1 px-2 rounded-full w-full text-sm'>Buy Now</button>
       </div>
     </div>
