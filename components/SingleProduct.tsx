@@ -19,7 +19,7 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
                 alt={product.title}
               /></div>
               
-              <div className="  w-[80%]">
+              <div className="w-[80%]">
               <h1 className="font-bold text-lg">{product.title}</h1>
               <p>{product.description}</p>
               <Rating ratings={product.rating}></Rating>
@@ -38,7 +38,10 @@ const SingleProduct = ({ singleProduct }: { singleProduct: any }) => {
       </div>
      
       <div className='w-[20%]'>
-        <AddToCardContainer></AddToCardContainer></div>
+        {
+          singleProduct.map((item:any)=><AddToCardContainer  key={item.id} item={item}></AddToCardContainer>)
+        }
+        </div>
       
     </div>
   );
