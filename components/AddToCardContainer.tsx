@@ -12,24 +12,19 @@ const AddToCardContainer = ({item}:{item:any}) => {
         <p className='py-2 flex gap-1 item-center hover:text-[#c7511f] cursor-pointer'>
           <TiLocationOutline className='text-black' size={20}></TiLocationOutline>
         Deliver to Bangladesh</p>
-        {/* <p className='text-2xl text-[#007600]'>In Stock</p>
-        <p className='flex gap-3'> <span>Ships from</span> <span>Amazon.com</span></p>
-        <p className='flex gap-3'> <span>Sold by
-
-</span> <span>Amazon.com</span></p>
-        <p className='flex gap-3'> <span>Ships from</span> <span>Amazon.com</span></p> */}
-        <div className='flex gap-4 text-sm'>
-          <ul>
+        <p className='text-2xl text-[#007600]'>In Stock</p>
+        <div className='flex gap-4 text-sm  text-[#565959]'>
+          <ul className='space-y-1'>
             <li>Ships from</li>
             <li>Sold by</li>
             <li>Returns</li>
             <li>Payment</li>
           </ul>
-          <ul>
-            <li>Amazon.com</li>
-            <li>Amazon.com</li>
-            <li>30-day refund</li>
-            <li>Secure tran</li>
+          <ul className='space-y-1'>
+            <li className='text-black'>Amazon.com</li>
+            <li className='text-black'>Amazon.com</li>
+            <li className='text-[#527185]' >30-day refund</li>
+            <li className='text-[#527185]'>Secure transaction</li>
           </ul>
         </div>
       </div>
