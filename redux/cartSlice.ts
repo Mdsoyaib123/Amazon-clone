@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { RootState } from "./index";
 interface cartSate{
     cart:any;
 }
@@ -17,4 +17,5 @@ const cartSlice =createSlice({
     }
 })
 export const {addToCart} = cartSlice.actions;
+export const getCart = (state: RootState) => state.cart.cart
 export default cartSlice.reducer;
