@@ -2,9 +2,11 @@ import { useAppDispatch } from '@/lib/supabase/hooks/redux';
 import { addToCart } from '@/redux/cartSlice';
 import React from 'react'
 import { TiLocationOutline } from "react-icons/ti";
+import { useRouter } from 'next/navigation';
 
 const AddToCardContainer = ({item}:{item:any}) => {
  const dispatch = useAppDispatch()
+ const router = useRouter()
   return (
     <div className='border border-gray-300 rounded-md h-fit'>
       <div className="p-4"> 
@@ -31,6 +33,7 @@ const AddToCardContainer = ({item}:{item:any}) => {
         </div>
         <button onClick={()=>{
          dispatch(addToCart(item))
+         router.push('/cart')
         }} className='bg-[#ffd814] py-1 px-2 rounded-full w-full text-sm mb-2'>Add to Cart</button>
         <button className='bg-[#ffa41c] py-1 px-2 rounded-full w-full text-sm'>Buy Now</button>
       </div>
