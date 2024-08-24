@@ -7,10 +7,10 @@ const ShoppingCart = () => {
   const cart = useAppSelector(getCart);
   return (
     <div>
-      <h1 className="font-bold text-2xl border-b border-gray-300 py-5">ShoppingCart</h1>
+      <h1 className="font-bold text-2xl border-b-2 border-gray-200 py-5">ShoppingCart</h1>
       {cart.map((product:any) => {
         return (
-          <>
+          <div key={product.id} className='flex justify-between'>
             <div className='flex gap-4 mt-4'>
               <div>
                 <Image src={product.image} width={100} height={100} alt={product.title}/>
@@ -24,7 +24,7 @@ const ShoppingCart = () => {
             <div>
               <h1>Price</h1>
             </div>
-          </>
+          </div>
         );
       })}
     </div>
