@@ -1,10 +1,11 @@
+import ShoppingCart from "./ShoppingCart"
 
-const cart = () => {
+const Cart = () => {
   return (
-    <div>
-      
+    <div className="w-[80%] mx-auto mt-10">
+      <ShoppingCart></ShoppingCart>
     </div>
   )
 }
 
-export default cart
+export default Cart
