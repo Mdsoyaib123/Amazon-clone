@@ -6,7 +6,7 @@ const Cart = () => {
       <div className="w-[80%]  ">
       <ShoppingCart></ShoppingCart>
     </div>
-    <div className='w-[20%] bg-white rounded-md text-center p-4'>
+    <div className='w-[20%] bg-white rounded-md text-center p-4 h-fit'>
       <h1>Payment section</h1>
     </div>
     </div>

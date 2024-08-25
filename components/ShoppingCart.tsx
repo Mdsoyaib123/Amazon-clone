@@ -25,7 +25,8 @@ const ShoppingCart = () => {
               </div>
             </div>
             <div>
-              <h1>{product.price}</h1>
+              <h1 className="text-lg font-bold">${product.price}</h1>
+              <p className='text-xs py-1'>M.R.P.:<span className='line-through'>$3,495.00</span></p>
             </div>
           </div>
         );
