@@ -13,8 +13,8 @@ const ShoppingCart = () => {
         </div>
       {cart.map((product:any) => {
         return (
-          <div key={product.id} className='flex justify-between  mt-4'>
-            <div className='flex gap-4'>
+          <div key={product.id} className='flex justify-between items-center my-4'>
+            <div className='flex gap-4 items-center'>
               <div>
                 <Image src={product.image} width={100} height={100} alt={product.title}/>
               </div>

@@ -2,7 +2,7 @@ import ShoppingCart from "./ShoppingCart"
 
 const Cart = () => {
   return (
-    <div className='flex gap-8 pt-10 mx-6'>
+    <div className='flex gap-8 pt-10 mx-8'>
       <div className="w-[80%]  ">
       <ShoppingCart></ShoppingCart>
     </div>
