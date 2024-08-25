@@ -6,7 +6,7 @@ import Image from "next/image";
 const ShoppingCart = () => {
   const cart = useAppSelector(getCart);
   return (
-    <div>
+    <div className='bg-white rounded-md px-6'>
       <div className='border-b-2 border-gray-200 flex justify-between items-end'>
         <h1 className="font-bold text-2xl  py-5">ShoppingCart</h1>
         <p className=''>Price</p>

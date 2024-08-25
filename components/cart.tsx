@@ -2,11 +2,11 @@ import ShoppingCart from "./ShoppingCart"
 
 const Cart = () => {
   return (
-    <div className='flex pt-10'>
-      <div className="w-[80%] mx-10 ">
+    <div className='flex gap-8 pt-10 mx-6'>
+      <div className="w-[80%]  ">
       <ShoppingCart></ShoppingCart>
     </div>
-    <div className='w-[15%]'>
+    <div className='w-[20%] bg-white rounded-md text-center p-4'>
       <h1>Payment section</h1>
     </div>
     </div>
