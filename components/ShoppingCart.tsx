@@ -1,6 +1,6 @@
 'use client'
 import {useAppDispatch, useAppSelector } from "@/lib/supabase/hooks/redux";
-import { getCart, removeFromCart } from "@/redux/cartSlice";
+import { getCart, removeFromCart,DecrementQuantity,incrementQuantity } from "@/redux/cartSlice";
 import Image from "next/image";
 
 const ShoppingCart = () => {
@@ -30,10 +30,14 @@ const ShoppingCart = () => {
                 <h1 onClick={()=>{
                   dispatch(removeFromCart(product.id))
                 }} className='font-bold  text-red-600 cursor-pointer'>REMOVE</h1>
-                <div className='flex gap-6 items-center bg-gray-200 rounded-md px-5 py-1 w-fit font-medium my-3'>
-                  <div className='text-lg cursor-pointer'>-</div>
-                  <div className=' '>0</div>
-                  <div className='text-lg cursor-pointer'>+</div>
+                <div className='flex gap-7 items-center bg-gray-200 rounded-md px-5 py-1 w-fit font-medium my-3'>
+                  <div onClick={()=>{
+                   product.quantity > 1 && dispatch(DecrementQuantity(product))
+                  }} className='text-lg cursor-pointer'>-</div>
+                  <div className=' '>{product.quantity}</div>
+                  <div onClick={()=>{
+                    dispatch(incrementQuantity(product))
+                  }} className='text-lg cursor-pointer'>+</div>
                 </div>
               </div>
             </div>
