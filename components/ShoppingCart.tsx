@@ -22,7 +22,7 @@ const ShoppingCart = () => {
                 <h1 className='font-medium '>{product.title}</h1>
                 <p className='text-[#007600] my-1 text-xs font-bold'>In Stock</p>
                 <h1 className='font-bold  text-red-600 cursor-pointer'>REMOVE</h1>
-                <div className='flex gap-6 items-center bg-gray-200 rounded-md px-5 py-1 w-fit font-medium'>
+                <div className='flex gap-6 items-center bg-gray-200 rounded-md px-5 py-1 w-fit font-medium my-3'>
                   <div className='text-lg cursor-pointer'>-</div>
                   <div className=' '>0</div>
                   <div className='text-lg cursor-pointer'>+</div>
