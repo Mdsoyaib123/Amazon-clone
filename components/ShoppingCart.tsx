@@ -6,7 +6,7 @@ import Image from "next/image";
 const ShoppingCart = () => {
   const cart = useAppSelector(getCart);
   return (
-    <div className='bg-white rounded-md px-6'>
+    <div className='bg-white rounded-md px-6 py-1'>
       <div className='border-b-2 border-gray-200 flex justify-between items-end'>
         <h1 className="font-bold text-2xl  py-5">ShoppingCart</h1>
         <p className=''>Price</p>
@@ -22,7 +22,7 @@ const ShoppingCart = () => {
                 <h1 className='font-medium '>{product.title}</h1>
                 <p className='text-[#007600] my-1 text-xs font-bold'>In Stock</p>
                 <h1 className='font-bold  text-red-600 cursor-pointer'>REMOVE</h1>
-                <div className='flex gap-8 items-center bg-gray-200 rounded-md px-5 py-1 w-fit'>
+                <div className='flex gap-6 items-center bg-gray-200 rounded-md px-5 py-1 w-fit font-medium'>
                   <div className='text-lg cursor-pointer'>-</div>
                   <div className=' '>0</div>
                   <div className='text-lg cursor-pointer'>+</div>
