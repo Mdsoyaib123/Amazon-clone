@@ -58,7 +58,9 @@ const cart = useAppSelector(getCart);
             <div className="">
               <p className="relative top-3 left-4">{cart.length}</p>
 
-              <div className="flex cursor-pointer">
+              <div onClick={()=>{
+                router.push('/cart')
+              }} className="flex cursor-pointer">
                 <div >
                   <PiShoppingCartSimpleThin
                     size={40}

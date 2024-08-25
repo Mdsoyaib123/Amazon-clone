@@ -10,9 +10,13 @@ const ShoppingCart = () => {
   return (
     <div className='bg-white rounded-md px-6 py-1'>
       <div className='border-b-2 border-gray-200 flex justify-between items-end'>
-        <h1 className="font-bold text-2xl  py-5">ShoppingCart</h1>
+        <div className='py-5'>
+        <h1 className="font-bold text-2xl  ">ShoppingCart</h1>
+        <h1 className='text-sm'>{`Total Products : ${cart.length}`}</h1>
+        </div>
         <p className=''>Price</p>
         </div>
+        
       {cart.map((product:any) => {
         return (
           <div key={product.id} className='flex justify-between items-center my-8'>
