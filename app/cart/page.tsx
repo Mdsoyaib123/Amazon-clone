@@ -2,7 +2,7 @@ import Cart from '@/components/Cart';
 
 const CartPage =()=>{
     return (
-        <div>
+        <div className='bg-gray-100'>
            <Cart></Cart>
         </div>
     )
