@@ -13,7 +13,7 @@ const ShoppingCart = () => {
         </div>
       {cart.map((product:any) => {
         return (
-          <div key={product.id} className='flex justify-between items-center my-4'>
+          <div key={product.id} className='flex justify-between items-center my-8'>
             <div className='flex gap-4 items-center'>
               <div>
                 <Image src={product.image} width={100} height={100} alt={product.title}/>
@@ -22,6 +22,11 @@ const ShoppingCart = () => {
                 <h1 className='font-medium '>{product.title}</h1>
                 <p className='text-[#007600] my-1 text-xs font-bold'>In Stock</p>
                 <h1 className='font-bold  text-red-600 cursor-pointer'>REMOVE</h1>
+                <div className='flex gap-8 items-center bg-gray-200 rounded-md px-5 py-1 w-fit'>
+                  <div className='text-lg cursor-pointer'>-</div>
+                  <div className=' '>0</div>
+                  <div className='text-lg cursor-pointer'>+</div>
+                </div>
               </div>
             </div>
             <div>
