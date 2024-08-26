@@ -51,7 +51,7 @@ const ShoppingCart = () => {
           </div>
         );
       })}
-      <h1 className='text-right py-3  ' >{`Subtotal (${cart.length} items): `}<span className='font-bold' >{`$${totalPrice}`}</span> </h1>
+      <h1 className='text-right py-3 text-lg ' >{`Subtotal (${cart.length} items): `}<span className='font-bold' >{`$${totalPrice}`}</span> </h1>
     </div>
   );
 };
