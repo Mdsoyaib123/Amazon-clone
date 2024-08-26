@@ -6,7 +6,10 @@ import Image from "next/image";
 const ShoppingCart = () => {
   const cart = useAppSelector(getCart);
   const dispatch = useAppDispatch();
-
+  let totalPrice = 0 ;
+  cart.forEach((item:any)=>{
+    totalPrice += item.price * item.quantity
+  })
   return (
     <div className='bg-white rounded-md px-6 py-1'>
       <div className='border-b-2 border-gray-200 flex justify-between items-end'>
@@ -19,7 +22,7 @@ const ShoppingCart = () => {
         
       {cart.map((product:any) => {
         return (
-          <div key={product.id} className='flex justify-between items-center my-8'>
+          <div key={product.id} className='flex justify-between items-center py-4 border-b-2 border-gray-200 '>
             <div className='flex gap-4 items-center'>
               <div>
                 <Image src={product.image} width={100} height={100} alt={product.title}/>
@@ -48,6 +51,7 @@ const ShoppingCart = () => {
           </div>
         );
       })}
+      <h1 className='text-right py-3  ' >{`Subtotal (${cart.length} items): `}<span className='font-bold' >{`$${totalPrice}`}</span> </h1>
     </div>
   );
 };
