@@ -1,16 +1,13 @@
-'use client'
-import {useAppDispatch, useAppSelector } from "@/lib/supabase/hooks/redux";
-import { getCart, removeFromCart,DecrementQuantity,incrementQuantity } from "@/redux/cartSlice";
+"use client"
+import {useAppDispatch } from "@/lib/supabase/hooks/redux";
+import { removeFromCart,DecrementQuantity,incrementQuantity } from "@/redux/cartSlice";
 import Image from "next/image";
 import SubTotal from "./SubTotal";
 
-const ShoppingCart = () => {
-  const cart = useAppSelector(getCart);
+const ShoppingCart = ({cart,totalPrice}:{cart:any,totalPrice:number}) => {
+
   const dispatch = useAppDispatch();
-  let totalPrice = 0 ;
-  cart.forEach((item:any)=>{
-    totalPrice += item.price * item.quantity
-  })
+  
   return (
     <div className='bg-white rounded-md px-6 py-1'>
       <div className='border-b-2 border-gray-200 flex justify-between items-end'>
