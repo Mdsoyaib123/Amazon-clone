@@ -2,6 +2,7 @@
 import {useAppDispatch, useAppSelector } from "@/lib/supabase/hooks/redux";
 import { getCart, removeFromCart,DecrementQuantity,incrementQuantity } from "@/redux/cartSlice";
 import Image from "next/image";
+import SubTotal from "./SubTotal";
 
 const ShoppingCart = () => {
   const cart = useAppSelector(getCart);
@@ -51,7 +52,7 @@ const ShoppingCart = () => {
           </div>
         );
       })}
-      <h1 className='text-right py-3 text-lg ' >{`Subtotal (${cart.length} items): `}<span className='font-bold' >{`$${totalPrice}`}</span> </h1>
+      <SubTotal length={cart.length} totalPrice={totalPrice}></SubTotal>
     </div>
   );
 };
