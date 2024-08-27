@@ -55,7 +55,7 @@ export const useSupabase = () => {
   const getWomansClothing =async( )=>{
     let{data,error}=await supabase.from('Products').select('*').ilike('category',`women's clothing`)
     if(data){
-      setMensProduct(data)
+      setWomansProduct(data)
     }
     if(error){
       console.log(error)

@@ -9,7 +9,7 @@ const HomePage = () => {
     womansProduct,
     getWomansClothing} =useSupabase()
 
-    console.log(mensProduct)
+    console.log(womansProduct)
 
     useEffect(()=>{
       getMensClothing();
