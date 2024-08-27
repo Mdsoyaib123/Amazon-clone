@@ -1,9 +1,12 @@
-import Image from "next/image";
+import HomePage from "@/components/HomePage"
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="">
-      
+    <div>
+      <h1 className='text-4xl text-center mt-10'>Sourav soyaib hossain </h1>
+      <HomePage></HomePage>
     </div>
-  );
+  )
 }
+
+export default page
