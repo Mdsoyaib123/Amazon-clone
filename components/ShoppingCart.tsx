@@ -49,7 +49,7 @@ const ShoppingCart = ({cart,totalPrice}:{cart:any,totalPrice:number}) => {
           </div>
         );
       })}
-      <SubTotal length={cart.length} totalPrice={totalPrice}></SubTotal>
+      <SubTotal length={cart.length} left={false} totalPrice={totalPrice}></SubTotal>
     </div>
   );
 };
