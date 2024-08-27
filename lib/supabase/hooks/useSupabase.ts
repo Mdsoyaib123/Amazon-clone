@@ -5,6 +5,8 @@ export const useSupabase = () => {
   const [product, setProduct] = useState<any>([]);
   const [filterData, setFilterData] = useState<any>([]);
   const [singleProduct, setSingleProduct] = useState<any>([]);
+  const [mensProduct, setMensProduct] = useState<any>([]);
+  const [womansProduct, setWomansProduct] = useState<any>([]);
 
   const getDataFromSupabase = async () => {
     let { data: Products, error } = await supabase.from("Products").select("*");
@@ -41,6 +43,24 @@ export const useSupabase = () => {
       console.log(error);
     }
   };
+  const getMensClothing =async( )=>{
+    let{data,error}=await supabase.from('Products').select('*').ilike('category',`men's clothing`)
+    if(data){
+      setMensProduct(data)
+    }
+    if(error){
+      console.log(error)
+    }
+  }
+  const getWomansClothing =async( )=>{
+    let{data,error}=await supabase.from('Products').select('*').ilike('category',`women's clothing`)
+    if(data){
+      setMensProduct(data)
+    }
+    if(error){
+      console.log(error)
+    }
+  }
 
   return {
     product,
@@ -49,5 +69,9 @@ export const useSupabase = () => {
     getFilterData,
     singleProduct,
     getSingleProduct,
+    mensProduct,
+    getMensClothing,
+    womansProduct,
+    getWomansClothing
   };
 };
