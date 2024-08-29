@@ -1,9 +1,9 @@
 import Image from "next/image";
-const CategoryWiseProduct = () => {
+const CategoryWiseProduct = ({product}:{product:any}) => {
   return (
     <div>
       <div>
-        <Image src={""} width={200} height={200} alt={"abe"} />
+        <Image src={product.image} width={200} height={200} alt={"abe"} />
       </div>
     </div>
   );
