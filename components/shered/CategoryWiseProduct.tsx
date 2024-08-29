@@ -1,9 +1,16 @@
 import Image from "next/image";
+import Rating from "./Rating";
+
 const CategoryWiseProduct = ({product}:{product:any}) => {
   return (
-    <div>
-      <div>
-        <Image src={product.image} width={200} height={200} alt={"abe"} />
+    <div className="cursor-pointer  border border-gray-100 rounded-md">
+      <div className="flex item-center  justify-center rounded-md bg-gray-100 h-[250px]">
+        <Image className="mix-blend-multiply p-8 " src={product.image} width={200} height={200} alt={"abe"} />
+      </div>
+      <div className="p-2 pb-1">
+        <h1>{product.title}</h1>
+        <Rating ratings={product.rating}></Rating>
+        <p className='font-bold text-2xl'>{`$${product.price}`}</p>
       </div>
     </div>
   );

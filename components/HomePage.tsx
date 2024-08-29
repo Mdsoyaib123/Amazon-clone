@@ -25,7 +25,7 @@ const HomePage = () => {
         quality={90}
         alt={"abc"}
       />
-      <div className="w-[80%] mx-auto grid grid-cols-4">
+      <div className="w-[80%] mx-auto grid grid-cols-4 gap-4">
         {mensProduct.map((product: any) => {
           return (
             <Link href={`./product/${product.id}`} key={product.id}>
