@@ -29,6 +29,7 @@ const HomePage = () => {
         {mensProduct.map((product: any) => {
           return (
             <Link href={`./product/${product.id}`} key={product.id}>
+             
               <CategoryWiseProduct product={product}></CategoryWiseProduct>
             </Link>
           );
