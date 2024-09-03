@@ -6,15 +6,21 @@ import CategoryWiseProduct from "./shered/CategoryWiseProduct";
 import Link from "next/link";
 
 const HomePage = () => {
-  const { mensProduct, getMensClothing, womansProduct, getWomansClothing } =
+  const { mensProduct, getMensClothing, womansProduct, getWomansClothing ,jewelry,
+    getJewelryProduct,
+    electronics,
+    getElectronicsProduct,} =
     useSupabase();
 
 
   useEffect(() => {
     getMensClothing();
     getWomansClothing();
+    getJewelryProduct();
+    getElectronicsProduct()
   }, []);
 
+  
   return (
     <div>
       <Image
@@ -34,7 +40,7 @@ const HomePage = () => {
           );
         })} */}
         <div>
-          
+
         </div>
       </div>
     </div>
