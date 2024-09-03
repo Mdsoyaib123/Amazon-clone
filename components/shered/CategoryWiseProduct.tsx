@@ -10,7 +10,7 @@ const CategoryWiseProduct = ({product}:{product:any}) => {
       <div className="p-2 pb-1">
         <h1>{product.title}</h1>
         <Rating ratings={product.rating}></Rating>
-        <p className=''>{`$${product.price}`}</p>
+        {/* <p className=''>{`$${product.price}`}</p> */}
       </div>
     </div>
   );
