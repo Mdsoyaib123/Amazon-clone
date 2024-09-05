@@ -39,19 +39,28 @@ const HomePage = () => {
             </Link>
           );
         })} */}
-        <div className="  grid grid-cols-4 justify-center items-center gap-3 px-4  relative -top-72">
-          <div className='flex justify-center w-[300px] h-[400px] mx-auto border  px-20 py-24 bg-white'>
+        <div className="  grid grid-cols-4  justify-center items-center gap-4 px-4  relative -top-72">
+          <div className='flex justify-center  h-[400px] w-full mx-auto border   bg-white'>
+            <div className='flex items-center justify-center'>
             <Image src={mensProduct[3]?.image} width={200 } height={200} quality={80}alt={'abc'}/>
+            </div>
           </div>
-          <div className='flex justify-center  w-[300px] h-[400px] mx-auto border px-20 py-24 bg-white'>
-          <Image src={womansProduct[4]?.image} width={200 } height={100} quality={80} alt={'abc'}/>
+          <div className='flex justify-center  h-[400px] w-full mx-auto border   bg-white'>
+            <div className='flex items-center justify-center'>
+            <Image src={womansProduct[4]?.image} width={200 } height={200} quality={80}alt={'abc'}/>
+            </div>
           </div>
-          <div className='flex justify-center  w-[300px] h-[400px] mx-auto border px-20 py-24 bg-white'>
-          <Image src={jewelry[1]?.image} width={200 }  height={200} quality={80} alt={'abc'}/>
+          <div className='flex justify-center  h-[400px] w-full mx-auto border   bg-white'>
+            <div className='flex items-center justify-center'>
+            <Image src={jewelry[2]?.image} width={200 } height={200} quality={80}alt={'abc'}/>
+            </div>
           </div>
-          <div className='flex justify-center w-[300px] h-[400px] mx-auto border px-20 py-24 bg-white'>
-          <Image src={electronics[4]?.image} width={200 } height={200} quality={80} alt={'abc'}/>
+          <div className='flex justify-center  h-[400px] w-full mx-auto border   bg-white'>
+            <div className='flex items-center justify-center'>
+            <Image src={electronics[5]?.image} width={200 } height={200} quality={80}alt={'abc'}/>
+            </div>
           </div>
+          
         </div>
       {/* </div> */}
     </div>
